@@ -57,7 +57,7 @@
           <ul class="navbar-nav ms-auto me-lg-3">
             <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="#institucional">Institucional</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#consultas">Servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="#recomendaciones">Recomendaciones</a></li>
             <li class="nav-item"><a class="nav-link" href="#novedades">Novedades</a></li>
             <li class="nav-item"><a class="nav-link" href="#capacitaciones">Capacitaciones</a></li>
@@ -86,7 +86,7 @@
                 <h1 id="hero-title">Preparados para proteger a Tucumán</h1>
                 <p>Coordinamos recursos, capacitamos a la comunidad y actuamos ante situaciones de emergencia en toda la provincia.</p>
                 <div class="d-flex flex-wrap gap-3">
-                  <a class="btn btn-primary btn-lg" href="#servicios">Conocé nuestros servicios</a>
+                  <a class="btn btn-primary btn-lg" href="#consultas">Conocé nuestros servicios</a>
                   <a class="btn btn-outline-light btn-lg" href="#institucional">Quiénes somos</a>
                 </div>
               </div>
@@ -153,7 +153,7 @@
       </div>
     </section>
 
-    <section id="servicios" class="quick-access section-padding" aria-labelledby="quick-title">
+    <section id="accesos-rapidos" class="quick-access section-padding" aria-labelledby="quick-title">
       <div class="container">
         <div class="section-heading text-center">
           <span class="section-label">Información útil</span>
@@ -167,6 +167,85 @@
           <div class="col-6 col-md-4 col-lg-2"><button class="quick-card w-100" type="button" data-topic="plan"><i class="bi bi-house-heart"></i><span>Plan familiar</span></button></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="quick-card" href="#brigada"><i class="bi bi-tree"></i><span>Brigada Forestal</span></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="quick-card" href="#capacitaciones"><i class="bi bi-mortarboard"></i><span>Capacitaciones</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consultas" class="consultation-section section-padding" aria-labelledby="consultation-title">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-label">Monitoreo y datos oficiales</span>
+          <h2 id="consultation-title">Servicios de consulta</h2>
+          <p>Accedé a alertas, índices de riesgo e información territorial en tiempo casi real desde fuentes nacionales y provinciales.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/smn.html">
+              <span class="consultation-card-icon" aria-hidden="true"><i class="bi bi-cloud-lightning-rain"></i></span>
+              <div class="consultation-card-body">
+                <h3>Servicio Meteorológico Nacional</h3>
+                <p>Alertas meteorológicas con sistema de semáforo para evaluar el nivel de riesgo por fenómeno.</p>
+                <span class="consultation-semaphore" aria-hidden="true">
+                  <span class="sem-dot sem-green"></span>
+                  <span class="sem-dot sem-yellow"></span>
+                  <span class="sem-dot sem-orange"></span>
+                  <span class="sem-dot sem-red"></span>
+                </span>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/fwi.html">
+              <span class="consultation-card-icon consultation-card-icon-fire" aria-hidden="true"><i class="bi bi-fire"></i></span>
+              <div class="consultation-card-body">
+                <h3>Índice FWI</h3>
+                <p>Índice meteorológico de peligro de incendio para conocer la condición de riesgo en distintas zonas.</p>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/inpres.html">
+              <span class="consultation-card-icon" aria-hidden="true"><i class="bi bi-activity"></i></span>
+              <div class="consultation-card-body">
+                <h3>INPRES</h3>
+                <p>Información y reportes de actividad sísmica para seguir eventos y novedades registradas.</p>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/vialidad-nacional.html">
+              <span class="consultation-card-icon" aria-hidden="true"><i class="bi bi-signpost-split"></i></span>
+              <div class="consultation-card-body">
+                <h3>Vialidad Nacional</h3>
+                <p>Estado de rutas nacionales: cortes, demoras y condiciones de circulación en el territorio.</p>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/vialidad-provincial.html">
+              <span class="consultation-card-icon" aria-hidden="true"><i class="bi bi-map"></i></span>
+              <div class="consultation-card-body">
+                <h3>Vialidad Provincial</h3>
+                <p>Estado de rutas provinciales de Tucumán para planificar desplazamientos con mayor seguridad.</p>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="consultation-card" href="consultas/flood-risk.html">
+              <span class="consultation-card-icon consultation-card-icon-water" aria-hidden="true"><i class="bi bi-moisture"></i></span>
+              <div class="consultation-card-body">
+                <h3>Flood Risk</h3>
+                <p>Riesgo de inundación integrando datos del SMN, EEAOC e INA para una visión unificada.</p>
+                <span class="consultation-card-meta">SMN · EEAOC · INA</span>
+                <span class="consultation-card-cta">Ir a la consulta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -218,27 +297,57 @@
     <section id="brigada" class="brigade-section section-padding" aria-labelledby="brigade-title">
       <div class="container">
         <div class="brigade-panel">
-          <div class="row g-0 align-items-stretch">
-            <div class="col-lg-7 brigade-copy">
-              <span class="section-label section-label-light">Unidad especializada</span>
-              <h2 id="brigade-title">Brigada Forestal Tucumán</h2>
-              <p>Previene y combate incendios forestales, monitorea zonas de riesgo y fortalece la coordinación territorial.</p>
-              <div class="brigade-stats">
-                <div><i class="bi bi-binoculars"></i><span><strong>Monitoreo</strong> territorial</span></div>
-                <div><i class="bi bi-broadcast-pin"></i><span><strong>Respuesta</strong> coordinada</span></div>
-                <div><i class="bi bi-person-arms-up"></i><span><strong>Capacitación</strong> comunitaria</span></div>
-              </div>
-              <button class="btn btn-light" type="button" data-demo-action="brigada">Ver actividad de la Brigada</button>
-            </div>
-            <div class="col-lg-5 fire-index">
-              <span class="demo-badge">Dato demostrativo</span>
-              <p>Índice de peligro de incendio</p>
-              <div class="gauge" role="img" aria-label="Índice demostrativo de peligro de incendio: moderado">
-                <span class="gauge-value">Moderado</span>
-              </div>
-              <small><i class="bi bi-clock" aria-hidden="true"></i> Actualización de ejemplo: hoy, 09:00</small>
+        <div class="row align-items-start g-5">
+          <div class="col-lg-5">
+            <span class="section-label section-label-light">Unidad especializada</span>
+            <h2 id="brigade-title">Brigada Forestal Tucumán</h2>
+            <p>Actividades, capacitaciones y cobertura territorial de la brigada en toda la provincia.</p>
+            <p>Previene y combate incendios forestales, monitorea zonas de riesgo y fortalece la coordinación con municipios y organismos de respuesta.</p>
+            <div class="brigade-stats">
+              <div><i class="bi bi-binoculars" aria-hidden="true"></i><span><strong>Monitoreo</strong> territorial</span></div>
+              <div><i class="bi bi-broadcast-pin" aria-hidden="true"></i><span><strong>Respuesta</strong> coordinada</span></div>
+              <div><i class="bi bi-person-arms-up" aria-hidden="true"></i><span><strong>Capacitación</strong> comunitaria</span></div>
             </div>
           </div>
+          <div class="col-lg-7">
+            <div class="brigade-activities-heading">
+              <h3 id="brigade-activities-title">Actividades de la brigada</h3>
+              <span class="availability">En curso</span>
+            </div>
+            <div class="training-list brigade-activities" aria-labelledby="brigade-activities-title">
+              <article>
+                <time datetime="2026-07-22"><strong>22</strong> JUL</time>
+                <div>
+                  <span class="activity-tag">Operativo</span>
+                  <h3>Operativo de contención en cerros de El Cadillal</h3>
+                </div>
+              </article>
+              <article>
+                <time datetime="2026-07-19"><strong>19</strong> JUL</time>
+                <div>
+                  <span class="activity-tag">Capacitación</span>
+                  <h3>Capacitación conjunta con Bomberos Voluntarios en Tafí Viejo</h3>
+                </div>
+              </article>
+              <article>
+                <time datetime="2026-07-16"><strong>16</strong> JUL</time>
+                <div>
+                  <span class="activity-tag">Cobertura</span>
+                  <h3>Cobertura preventiva por quemas rurales — sur provincial</h3>
+                  <p><i class="bi bi-clock" aria-hidden="true"></i> Jornada de 24 hs</p>
+                </div>
+              </article>
+              <article>
+                <time datetime="2026-07-12"><strong>12</strong> JUL</time>
+                <div>
+                  <span class="activity-tag">Reconocimiento</span>
+                  <h3>Recorrida de reconocimiento en Los Sosa</h3>
+                </div>
+              </article>
+            </div>
+            <a class="text-link text-link-light brigade-activities-link" href="#novedades">Ver todas las novedades <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -358,7 +467,7 @@
         </div>
         <div class="col-6 col-lg-2">
           <h2>Institucional</h2>
-          <ul><li><a href="#institucional">Quiénes somos</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#novedades">Novedades</a></li></ul>
+          <ul><li><a href="#institucional">Quiénes somos</a></li><li><a href="#consultas">Servicios de consulta</a></li><li><a href="#novedades">Novedades</a></li></ul>
         </div>
         <div class="col-6 col-lg-2">
           <h2>Prevención</h2>
