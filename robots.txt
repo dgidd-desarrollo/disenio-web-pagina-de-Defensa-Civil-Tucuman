@@ -1,0 +1,5 @@
+# Actualizar Sitemap con la URL pública definitiva del sitio.
+User-agent: *
+Allow: /
+
+Sitemap: https://defensacivil.tucuman.gob.ar/sitemap.xml
