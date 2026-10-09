@@ -1,3 +1,24 @@
+// Pensado para ser reemplazado por la respuesta del backend.
+// level: "red" | "orange" | "green"
+const alertModalConfig = {
+  active: true,
+  level: "red",
+  title: "Alerta por posibles lluvias intensas",
+  message: "Se prevén lluvias intensas y tormentas fuertes en distintas zonas de la provincia durante las próximas horas.",
+  items: [
+    "Evitá circular por calles y rutas anegadas.",
+    "No saques residuos: pueden obstruir los desagües.",
+    "Asegurá objetos que puedan volarse y alejate de árboles y postes.",
+    "Mantenete informado por los canales oficiales."
+  ]
+};
+
+const alertLevels = {
+  red: { label: "Alerta roja", icon: "bi-exclamation-octagon-fill" },
+  orange: { label: "Alerta naranja", icon: "bi-exclamation-triangle-fill" },
+  green: { label: "Aviso", icon: "bi-check-circle-fill" }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const currentYear = document.querySelector("#currentYear");
   const carouselElement = document.querySelector("#heroCarousel");
@@ -168,6 +189,33 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-demo-action]").forEach((button) => {
     button.addEventListener("click", () => demoToast?.show());
   });
+
+  const showAlertModal = (config) => {
+    const alertElement = document.querySelector("#alertModal");
+    if (!config?.active || !alertElement || !window.bootstrap) return;
+
+    const level = alertLevels[config.level] ? config.level : "red";
+    const { label, icon } = alertLevels[level];
+
+    Object.keys(alertLevels).forEach((key) => alertElement.classList.remove(`alert-modal--${key}`));
+    alertElement.classList.add(`alert-modal--${level}`);
+
+    document.querySelector("#alertModalLabel").textContent = label;
+    document.querySelector("#alertModalIcon").className = `bi ${icon}`;
+    document.querySelector("#alertModalTitle").textContent = config.title ?? "";
+    document.querySelector("#alertModalMessage").textContent = config.message ?? "";
+
+    const list = document.querySelector("#alertModalList");
+    list.replaceChildren(...(config.items ?? []).map((item) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = item;
+      return listItem;
+    }));
+
+    bootstrap.Modal.getOrCreateInstance(alertElement).show();
+  };
+
+  showAlertModal(alertModalConfig);
 
   document.querySelectorAll('#navbarContent a[href^="#"]').forEach((link) => {
     link.addEventListener("click", () => {

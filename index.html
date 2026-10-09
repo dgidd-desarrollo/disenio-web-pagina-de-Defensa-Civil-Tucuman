@@ -30,8 +30,8 @@
   <link rel="alternate" hreflang="es-AR" href="https://defensacivil.tucuman.gob.ar/">
   <link rel="alternate" hreflang="x-default" href="https://defensacivil.tucuman.gob.ar/">
 
-  <link rel="icon" href="img/logo_DC_conletra.png" type="image/png">
-  <link rel="apple-touch-icon" href="img/logo_DC_conletra.png">
+  <link rel="icon" href="img/icono.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/icono.png">
 
   <meta property="og:locale" content="es_AR">
   <meta property="og:type" content="website">
@@ -573,7 +573,7 @@
           <ul><li><a href="#consultas">Alertas</a></li><li><a href="#recomendaciones">Recomendaciones</a></li><li><a href="#capacitaciones">Capacitaciones</a></li></ul>
         </div>
         <div class="col-lg-4 footer-government">
-          <img src="img/logo-tucuman1.png" alt="Gobierno de Tucumán" width="368" height="118">
+          <img src="img/logo-seguridad.png" alt="Ministerio de Seguridad · Gobierno de Tucumán" width="990" height="268">
           <a class="footer-emergency" href="tel:103"><strong>103</strong><span>Emergencias<br>las 24 horas</span></a>
         </div>
       </div>
@@ -599,6 +599,25 @@
         <div class="modal-footer">
           <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> Si existe riesgo inmediato, llamá al <strong>103</strong>.</p>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade alert-modal" id="alertModal" tabindex="-1" aria-labelledby="alertModalTitle" aria-describedby="alertModalMessage" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close btn-close-white alert-modal-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        <div class="alert-modal-body">
+          <span class="alert-modal-icon" aria-hidden="true"><i id="alertModalIcon" class="bi bi-exclamation-octagon-fill"></i></span>
+          <span class="alert-modal-label" id="alertModalLabel">Alerta</span>
+          <h2 class="alert-modal-title" id="alertModalTitle"></h2>
+          <p class="alert-modal-message" id="alertModalMessage"></p>
+          <ul class="alert-modal-list" id="alertModalList"></ul>
+        </div>
+        <div class="alert-modal-footer">
+          <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> Ante una emergencia, llamá al <strong>103</strong>.</p>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Entendido</button>
         </div>
       </div>
     </div>
