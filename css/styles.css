@@ -123,6 +123,21 @@ h3 {
   box-shadow: 0 5px 20px rgba(3, 31, 58, 0.04);
 }
 
+#mainNav {
+  padding-top: calc(0.5rem + 7px);
+}
+
+#mainNav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: #ff4d00;
+  pointer-events: none;
+}
+
 .navbar-brand {
   padding: 0;
 }
@@ -207,7 +222,7 @@ h3 {
 }
 
 .hero-section .carousel-inner {
-  background: var(--dc-blue-950);
+  background: #ff4d00;
 }
 
 .hero-image {
@@ -222,8 +237,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(2, 24, 45, 0.96) 0%, rgba(3, 36, 66, 0.88) 38%, rgba(3, 31, 58, 0.25) 72%, rgba(3, 31, 58, 0.1) 100%),
-    linear-gradient(0deg, rgba(2, 20, 38, 0.35), transparent 50%);
+    linear-gradient(90deg, rgba(234, 68, 0, 0.96) 0%, rgba(255, 77, 0, 0.9) 40%, rgba(255, 106, 0, 0.45) 72%, rgba(255, 120, 0, 0.2) 100%),
+    linear-gradient(0deg, rgba(220, 50, 0, 0.35), transparent 50%);
 }
 
 .hero-content {
@@ -238,7 +253,8 @@ h3 {
 
 .hero-copy {
   width: min(670px, 74%);
-  color: #e9f2f8;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(120, 30, 0, 0.35);
 }
 
 .hero-copy h1,
@@ -253,7 +269,8 @@ h3 {
 .hero-copy p {
   max-width: 640px;
   margin-bottom: 2rem;
-  color: #e5edf4;
+  color: #fff;
+  font-weight: 500;
   font-size: clamp(1.05rem, 1.7vw, 1.25rem);
   line-height: 1.65;
 }
@@ -297,10 +314,15 @@ h3 {
 }
 
 .hero-section .btn-primary {
-  --bs-btn-bg: var(--dc-red);
-  --bs-btn-border-color: var(--dc-red);
-  --bs-btn-hover-bg: var(--dc-red-dark);
-  --bs-btn-hover-border-color: var(--dc-red-dark);
+  --bs-btn-color: #c2410c;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #7c2d12;
+  --bs-btn-hover-bg: #ffedd5;
+  --bs-btn-hover-border-color: #ffedd5;
+  --bs-btn-active-color: #7c2d12;
+  --bs-btn-active-bg: #fed7aa;
+  --bs-btn-active-border-color: #fed7aa;
 }
 
 .carousel-control-prev,
@@ -555,33 +577,27 @@ button.quick-card {
 .consultation-section {
   position: relative;
   background:
-    radial-gradient(ellipse at 8% 0%, rgba(220, 38, 38, 0.24), transparent 42%),
-    radial-gradient(ellipse at 92% 100%, rgba(153, 27, 27, 0.2), transparent 46%),
-    linear-gradient(180deg, #fff4f4 0%, #ffe4e4 100%);
+    radial-gradient(ellipse at 10% 0%, rgba(255, 140, 0, 0.45), transparent 45%),
+    radial-gradient(ellipse at 90% 100%, rgba(220, 50, 0, 0.4), transparent 50%),
+    linear-gradient(135deg, #ea4400 0%, #ff4d00 50%, #ff6a00 100%);
   border-top: 0;
   border-bottom: 0;
 }
 
-.consultation-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #7f1d1d 0%, #dc2626 48%, #ef4444 100%);
-}
-
 .consultation-section .section-label {
-  color: #dc2626;
+  color: #fff;
+  opacity: 0.92;
 }
 
 .consultation-section .section-heading h2 {
-  color: #991b1b;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(120, 30, 0, 0.3);
 }
 
 .consultation-section .section-heading p {
-  color: #7f2d2d;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(120, 30, 0, 0.3);
 }
 
 .consultation-card {
@@ -592,20 +608,19 @@ button.quick-card {
   padding: 1.35rem;
   color: var(--dc-ink);
   background: #fff;
-  border: 1px solid #f5c2c2;
-  border-left: 4px solid #dc2626;
+  border: 0;
+  border-top: 4px solid #ff4d00;
   border-radius: var(--dc-radius);
-  box-shadow: 0 10px 28px rgba(185, 28, 28, 0.1);
+  box-shadow: 0 14px 34px rgba(140, 35, 0, 0.22);
   text-decoration: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .consultation-card:hover {
   color: var(--dc-ink);
-  border-color: #f0a8a8;
-  border-left-color: #991b1b;
-  box-shadow: 0 16px 36px rgba(185, 28, 28, 0.22);
-  transform: translateY(-3px);
+  border-top-color: #c2410c;
+  box-shadow: 0 20px 44px rgba(140, 35, 0, 0.34);
+  transform: translateY(-4px);
 }
 
 .consultation-card-icon {
@@ -614,18 +629,18 @@ button.quick-card {
   display: grid;
   place-items: center;
   color: #fff;
-  background: linear-gradient(145deg, #ef4444, #b91c1c);
+  background: linear-gradient(145deg, #ff7a00, #ea4400);
   border-radius: 12px;
   font-size: 1.4rem;
-  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.34);
+  box-shadow: 0 8px 18px rgba(234, 68, 0, 0.35);
 }
 
 .consultation-card-icon-fire {
-  background: linear-gradient(145deg, #f87171, #991b1b);
+  background: linear-gradient(145deg, #ff6a00, #dc2626);
 }
 
 .consultation-card-icon-water {
-  background: linear-gradient(145deg, #e11d48, #9f1239);
+  background: linear-gradient(145deg, #ff9500, #ea4400);
 }
 
 .consultation-card-body {
@@ -637,7 +652,7 @@ button.quick-card {
 
 .consultation-card h3 {
   margin: 0;
-  color: #991b1b;
+  color: #9a3412;
   font-size: 1.02rem;
   line-height: 1.25;
 }
@@ -645,13 +660,13 @@ button.quick-card {
 .consultation-card p {
   flex: 1;
   margin: 0;
-  color: #6b3030;
+  color: #5c4033;
   font-size: 0.88rem;
   line-height: 1.5;
 }
 
 .consultation-card-meta {
-  color: #dc2626;
+  color: #c2410c;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -698,13 +713,13 @@ button.quick-card {
   gap: 0.35rem;
   align-items: center;
   margin-top: 0.35rem;
-  color: #dc2626;
+  color: #c2410c;
   font-size: 0.82rem;
   font-weight: 800;
 }
 
 .consultation-card:hover .consultation-card-cta {
-  color: #7f1d1d;
+  color: #9a3412;
 }
 
 .consultation-card-cta i {
@@ -1530,7 +1545,7 @@ button.quick-card {
   }
 
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(2, 24, 45, 0.96), rgba(3, 36, 66, 0.72)), linear-gradient(0deg, rgba(2,20,38,.6), transparent);
+    background: linear-gradient(90deg, rgba(234, 68, 0, 0.95), rgba(255, 77, 0, 0.85)), linear-gradient(0deg, rgba(220, 50, 0, 0.45), transparent);
   }
 
   .hero-image {
