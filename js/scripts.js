@@ -13,6 +13,14 @@ const alertModalConfig = {
   ]
 };
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch((error) => {
+      console.warn("No se pudo registrar el service worker:", error);
+    });
+  });
+}
+
 const alertLevels = {
   red: { label: "Alerta roja", icon: "bi-exclamation-octagon-fill" },
   orange: { label: "Alerta naranja", icon: "bi-exclamation-triangle-fill" },

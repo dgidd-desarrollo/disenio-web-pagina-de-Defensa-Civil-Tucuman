@@ -1,0 +1,42 @@
+{
+  "id": "./",
+  "name": "Defensa Civil Tucumán",
+  "short_name": "Defensa Civil",
+  "description": "Alertas, prevención de riesgos y servicios de consulta de Defensa Civil Tucumán. Ante una emergencia, llamá al 103.",
+  "lang": "es-AR",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff4d00",
+  "categories": ["government", "news", "weather"],
+  "icons": [
+    {
+      "src": "img/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Servicios de consulta",
+      "short_name": "Consultas",
+      "url": "./?source=pwa#consultas",
+      "icons": [{ "src": "img/pwa/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
